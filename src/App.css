@@ -16,6 +16,7 @@
   justify-content: center;
   align-items: center;
   margin: 1.1rem;
+  flex-direction: column;
 }
 
 .form-elements-wrapper input {
@@ -24,6 +25,11 @@
   font-size: 1rem;
   border: 2px solid rgba(36, 87, 255, 0.52);
   border-radius: 5px;
+}
+
+.form-elements-wrapper label {
+  align-self: start;
+  margin: 10px;
 }
 
 .standard-button {
