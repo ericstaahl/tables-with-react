@@ -4,8 +4,6 @@ import { useTable } from "react-table"
 
 const Table = ({ data }) => {
 
-    console.log("Here is the data", data)
-
     const columns = useMemo(() => [
         {
             Header: 'User ID',

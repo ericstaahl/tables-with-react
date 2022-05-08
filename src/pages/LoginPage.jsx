@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 const LoginPage = () => {
@@ -6,19 +6,14 @@ const LoginPage = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
+  // Check if the entered username and password correspond to these set values
+  // If so, navigate to the page with the table
   const handleSubmit = (e) => {
     e.preventDefault()
     if (username === 'username' && password === 'password') {
       navigate('/home')
-    }    
+    }
   }
-
-  console.log(username)
-  console.log(password)
-
-  useEffect(() => {
-
-  }, [username, password])
 
   return (
     <>
@@ -27,7 +22,8 @@ const LoginPage = () => {
 
           <div className="form-elements-wrapper">
             <label htmlFor="username">Username</label>
-
+            {/* Controlled input. Value is equal to 'username' 
+            and writing in the field causes that variable to change */}
             <input
               type="text"
               name="username"
@@ -41,7 +37,8 @@ const LoginPage = () => {
 
           <div className="form-elements-wrapper">
             <label htmlFor="password">Password</label>
-
+            {/* Controlled input. Value is equal to 'username' 
+            and writing in the field causes that variable to change */}
             <input
               type="password"
               name="password"
@@ -54,7 +51,7 @@ const LoginPage = () => {
 
           </div>
           <div className="form-elements-wrapper">
-              <button className="standard-button">Login</button>
+            <button className="standard-button">Login</button>
           </div>
         </form>
 
