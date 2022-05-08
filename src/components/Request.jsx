@@ -9,7 +9,6 @@ const Request = () => {
     //Fetch data using axios.
     const fetchData = async () => {
         const apiRes = await axios.get(`${baseUrl}${resourceUrl}`)
-        // console.log(apiRes)
         return apiRes.data
     }
 
@@ -25,7 +24,6 @@ const Request = () => {
         return <p>Error: {error.message}</p>
     }
 
-    // console.log(data)
     return (
         <>
             {/* Buttons to set the resourceUrl. */}
