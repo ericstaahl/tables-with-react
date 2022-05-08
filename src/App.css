@@ -24,6 +24,10 @@
   min-height: 100vh;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* Login page */
 
 .form-wrapper {
@@ -54,11 +58,20 @@
   margin: 10px;
 }
 
+.login-error {
+  text-align: center;
+  color: rgb(196, 0, 0);
+}
+
 /* Home page */
 .button-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logout {
+  margin: 10px;
 }
 
 /* Table */

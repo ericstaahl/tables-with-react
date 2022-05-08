@@ -5,6 +5,7 @@ const LoginPage = ({ setToken }) => {
   const navigate = useNavigate()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [errorShow, setErrorShow] = useState(false)
 
   // Check if the entered username and password correspond to these set values
   // If so, navigate to the page with the table
@@ -15,6 +16,7 @@ const LoginPage = ({ setToken }) => {
       setToken(token)
       navigate('/home')
     }
+    setErrorShow(true)
   }
 
   return (
@@ -52,6 +54,9 @@ const LoginPage = ({ setToken }) => {
             />
 
           </div>
+          {errorShow && (
+            <p className="login-error">Please try again</p>
+          )}
           <div className="form-elements-wrapper">
             <button className="standard-button">Login</button>
           </div>

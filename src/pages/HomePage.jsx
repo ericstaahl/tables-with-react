@@ -12,8 +12,10 @@ const HomePage = () => {
 
   return (
     <>
-      <h1>Home Page</h1>
-      <button className="standard-button" onClick={handleLogout}>Log out</button>
+      <div className="text-center">
+        <h1>Home Page</h1>
+        <button className="standard-button logout" onClick={handleLogout}>Log out</button>
+      </div>
       <Request></Request>
     </>
   )
