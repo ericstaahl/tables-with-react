@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "react-query"
 import { useState } from 'react';
 
 function App() {
-  const [fetchedToken, setFetchedToken] = useState(localStorage.getItem('token'))
+  const [fetchedToken, setFetchedToken] = useState(JSON.parse(localStorage.getItem('token')))
 
   const queryClient = new QueryClient()
 
@@ -15,7 +15,7 @@ function App() {
     setFetchedToken(token)
   }
 
-  console.log(fetchedToken.token)
+  console.log(fetchedToken)
 
   return (
     <QueryClientProvider client={queryClient}>
