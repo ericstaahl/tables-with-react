@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const LoginPage = () => {
   const navigate = useNavigate()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [success, setSucess] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -59,11 +58,6 @@ const LoginPage = () => {
           </div>
         </form>
 
-        {success && (
-          <div>
-            Success!
-          </div>
-        )}
       </div>
     </>
   )

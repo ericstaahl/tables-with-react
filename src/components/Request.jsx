@@ -5,9 +5,9 @@ const axios = require('axios')
 
 const Request = () => {
     const fetchData = async () => {
-        const apiRes = await axios.get('https://jsonplaceholder.typicode.com/posts/2')
+        const apiRes = await axios.get('https://jsonplaceholder.typicode.com/posts/')
         console.log(apiRes)
-        return [apiRes.data]
+        return apiRes.data
     }
 
     const { isLoading, error, data } = useQuery('apiRes', fetchData)
