@@ -3,7 +3,9 @@ import { useTable } from "react-table"
 
 
 const Table = ({ data }) => {
-
+    // The columns to be supplied to useTable. 
+    // Accessor should match the respective property in the data from the API.
+    // Unfortunately haven't found a good way to hide the "Message" column when its not needed
     const columns = useMemo(() => [
         {
             Header: 'User ID',

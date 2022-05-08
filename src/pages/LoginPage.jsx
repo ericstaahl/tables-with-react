@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-const LoginPage = ({setToken}) => {
+const LoginPage = ({ setToken }) => {
   const navigate = useNavigate()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -11,7 +11,7 @@ const LoginPage = ({setToken}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (username === 'username' && password === 'password') {
-      const token = {token: "token12345"}
+      const token = { token: "token12345" }
       setToken(token)
       navigate('/home')
     }
